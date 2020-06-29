@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:card="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+             xmlns:local="clr-namespace:CardView_Background"
+             mc:Ignorable="d"
+             x:Class="CardView_Background.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:CardLayoutViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="blueTemplate">
+                <card:SfCardView BackgroundColor="{Binding BackgroundColor}">
+                    <local:CustomStackLayout />
+                </card:SfCardView>
+            </DataTemplate>
+            <local:CustomDataTemplateSelector x:Key="dataTemplateSelector"
+                BackgroundTemplate="{StaticResource blueTemplate}"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <card:SfCardLayout x:Name="cardLayout" BindableLayout.ItemsSource="{Binding Data}" BindableLayout.ItemTemplateSelector="{StaticResource dataTemplateSelector}" SwipeDirection="Left" VerticalOptions="Center"  HeightRequest="600" WidthRequest="300">
+    </card:SfCardLayout>
+
+</ContentPage>
