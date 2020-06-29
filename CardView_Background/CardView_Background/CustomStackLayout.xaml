@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CardView_Background"
+             x:Class="CardView_Background.CustomStackLayout"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             Spacing="0">
+
+    <Grid BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Text="Name :" HorizontalOptions="EndAndExpand" TextColor="Black" FontAttributes="Bold" />
+
+        <Label Grid.Row="1" Grid.Column="0" Text="Subject :" HorizontalOptions="EndAndExpand" TextColor="Black" FontAttributes="Bold" />
+
+        <Label Grid.Row="2" Grid.Column="0" Text="Mark :" HorizontalOptions="EndAndExpand" TextColor="Black" FontAttributes="Bold" />
+
+        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" TextColor="Black" />
+
+        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Subject}" TextColor="Black" />
+
+        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Mark}" TextColor="Black" />
+        
+    </Grid>
+
+</StackLayout>
