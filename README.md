@@ -12,7 +12,7 @@ This demo sample explains how to customize the cards background color.
 * [Windows App SDK 1.1 extension](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/stable-channel#version-11)
 * .NET 6.0
 
-Refer to the following link for more details - [System Requirements](https://help.syncfusion.com/winui/system-requirements)
+Refer to the following link for more details - [System Requirements](https://help.syncfusion.com/xamarin/system-requirements)
 
 ## How to run the sample
 
@@ -30,7 +30,7 @@ Refer to the following link for more details - [System Requirements](https://hel
             InitializeComponent();
         }
 
-    Refer to this [link](https://help.syncfusion.com/winui/licensing/overview) for more details.
+    Refer to this [link](https://help.syncfusion.com/xamarin/licensing/overview) for more details.
 
 3. Clean and build the application.
 
